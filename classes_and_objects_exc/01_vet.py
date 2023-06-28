@@ -2,16 +2,16 @@ from typing import List
 
 
 class Vet:
-    animals = []
-    space = 5
+    animals: List[str] = []
+    SPACE = 5
 
     def __init__(self, name: str):
         self.name = name
         self.animals: List[str] = []
 
     def register_animal(self, animal_name: str):
-        if len(self.animals) >= Vet.space:
-            return "Not enough space"
+        if len(self.animals) >= Vet.SPACE:
+            return "Not enough SPACE"
 
         self.animals.append(animal_name)
         Vet.animals.append(animal_name)
@@ -27,7 +27,7 @@ class Vet:
         return f"{animal_name} unregistered successfully"
 
     def info(self):
-        return f"{self.name} has {len(self.animals)} animals. {Vet.space - len(Vet.animals)} space left in clinic "
+        return f"{self.name} has {len(self.animals)} animals. {Vet.SPACE - len(Vet.animals)} SPACE left in clinic "
 
 
 peter = Vet("Peter")
