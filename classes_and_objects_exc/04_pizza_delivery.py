@@ -6,11 +6,10 @@ class PizzaDelivery:
         self.ingredients = ingredients
         self.ordered = False
 
-    def add_extra(self, ingredient: str,quantity:int, price_per_quantity: float):
+    def add_extra(self, ingredient: str, quantity: int, price_per_quantity: float):
 
         if self.ordered:
             return f"Pizza {self.name} already prepared, and we can't make any changes!"
-
 
         if ingredient in self.ingredients:
             self.ingredients[ingredient] += quantity
@@ -20,7 +19,7 @@ class PizzaDelivery:
 
         self.price += price_per_quantity * quantity
 
-    def remove_ingredient(self, ingredient: str,quantity:int, price_per_quantity: float):
+    def remove_ingredient(self, ingredient: str, quantity:int, price_per_quantity: float):
 
         if self.ordered:
             return f"Pizza {self.name} already prepared, and we can't make any changes!"
