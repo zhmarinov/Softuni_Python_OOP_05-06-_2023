@@ -152,3 +152,6 @@ cython_debug/
 #.idea/
 *.xml
 .idea/.name
+classes_and_objects_exc/__init__.py
+classes_and_objects_lab/__init__.py
+first_steps_in_oop_exc/project/__init__.py
