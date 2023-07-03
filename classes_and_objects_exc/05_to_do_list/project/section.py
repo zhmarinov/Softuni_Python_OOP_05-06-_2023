@@ -31,8 +31,7 @@ class Section:
     def view_section(self):
         tasks = '\n'.join([t.details() for t in self.tasks])
 
-        return f"Section {self.name}:\n" + \
-               f"{tasks}"
+        return f"Section {self.name}:\n" + f"{tasks}"
 
 
 task = Task("Make bed", "27/05/2020")
