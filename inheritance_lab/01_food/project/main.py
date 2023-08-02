@@ -1,4 +1,0 @@
-
-
-
-class Fruit(Food):
