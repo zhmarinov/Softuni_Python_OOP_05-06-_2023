@@ -12,6 +12,7 @@ class Team:
     def add_player(self, player: Player):
         if player in self.__players:
             return f"Player {player.name} has already joined"
+
         self.__players.append(player)
         return f"Player {player.name} joined team {self.__name}"
 
