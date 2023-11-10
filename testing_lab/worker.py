@@ -16,24 +16,24 @@ def init_logging():
 
 class Worker:
     def __init__(self, name, salary, energy):
-        _log.info("Worker.__init__ - called... (name: '%s', salary: '%s', energy: '%s')", name, salary, energy)
+        _log.info("Worker.__init__ - called... (name: '%s', salary: %s, energy: %s)", name, salary, energy)
         self.name = name
         self.salary = salary
         self.energy = energy
         self.money = 0
 
     def work(self):
-        _log.info("Worker.work - called...")
+        _log.info("Worker.work - called ... self: %r", self)
         if self.energy <= 0:
             raise Exception('Not enough energy.')
         self.money += self.salary
         self.energy -= 1
-        _log.info("Worker.work ...done! (energy: '%s', money: '%s')", self.energy, self.money)
+        _log.info("Worker.work ...done! (energy: %s, money: %s)", self.energy, self.money)
 
     def rest(self):
-        _log.info("Worker.rest - called ... self: '%r'"), self
+        _log.info("Worker.rest - called ... Worker info: %r", self)
         self.energy += 1
-        _log.info("Worker.rest ... done! self: %r"), self
+        _log.info("Worker.rest ... done! energy: %r", self.energy)
 
     def get_info(self):
         # raise NotImplemented()
