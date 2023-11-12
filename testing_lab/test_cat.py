@@ -118,5 +118,5 @@ class CatTests(TestCase):
 
 
 if __name__ == '__main__':
-    init_logging()  # Comment this for judge
+    # init_logging()  # Comment this for judge
     main()
